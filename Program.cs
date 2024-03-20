@@ -1,7 +1,32 @@
+using Microsoft.EntityFrameworkCore;
+using SoftUniSpaceConsoleWebApp.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+
+
+string connectionString = builder.Configuration.GetConnectionString("ApplicationContextConnectionString"); 
+//???? ? ????? Configuration e appsettings.json
+if (connectionString != null )
+{
+    throw new InvalidDataException("COnnection string is not found bruh ApplicationContextConnectionString");
+}
+
+
+
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+
+
+
+builder.Services.AddDbContext<ApplicationContext>(context => context.UseMySQL(connectionString));
+
+
+
 
 var app = builder.Build();
 
