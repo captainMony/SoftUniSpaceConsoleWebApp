@@ -1,9 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SoftUniSpaceConsoleWebApp.Data.Entities;
+
 
 namespace SoftUniSpaceConsoleWebApp.Data
 {
     public class ApplicationContext : DbContext
     {
-        //17:40 to do 
+        public DbSet<Crew> Crewmen {  get; set; }
     }
 }
