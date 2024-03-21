@@ -10,7 +10,9 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
         }
 
 
-
-
+        public IActionResult Create() //tova e definirano v _Layout.cshtml.
+        {
+            return View(); //posle otiva v views
+        }
     }
 }
