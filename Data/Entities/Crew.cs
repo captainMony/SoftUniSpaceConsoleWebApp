@@ -15,5 +15,12 @@ namespace SoftUniSpaceConsoleWebApp.Data.Entities
         [Required]
         public string Rank { get; set; }
 
+        public Crew( string name, int age, string rank)
+        {
+          
+            Name = name;
+            Age = age;
+            Rank = rank;
+        }
     }
 }
