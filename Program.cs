@@ -6,15 +6,17 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 
-string connectionString = builder.Configuration.GetConnectionString("ApplicationContextConnectionString"); 
-//???? ? ????? Configuration e appsettings.json
-if (connectionString != null )
-{
-    throw new InvalidDataException("COnnection string is not found bruh ApplicationContextConnectionString");
-}
+//string connectionString = builder.Configuration.GetConnectionString("ApplicationContextConnectionString"); 
+////???? ? ????? Configuration e appsettings.json
+//if (connectionString != null )
+//{
+//    throw new InvalidDataException("COnnection string is not found bruh ApplicationContextConnectionString");
+//}
+//
 
-
-
+string connectionString =
+    builder.Configuration.GetConnectionString("ApplicationContextConnectionString") ??
+    throw new InvalidDataException("No connection string dude");
 
 
 // Add services to the container.
