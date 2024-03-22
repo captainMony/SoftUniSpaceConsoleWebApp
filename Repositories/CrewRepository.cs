@@ -13,9 +13,9 @@ namespace SoftUniSpaceConsoleWebApp.Repositories
         {
             this.context = context;
         }
-        public void Add(Crew crew)
+        public void Add(Crew Crew)
         {
-            context.Crewmen.Add(crew);  
+            context.Crewmen.Add(Crew);  
             context.SaveChanges();  
 
         }

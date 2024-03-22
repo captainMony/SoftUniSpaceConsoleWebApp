@@ -18,9 +18,9 @@ namespace SoftUniSpaceConsoleWebApp.Services
         
         
         }
-        public void Add(CreateCrewViewModel CrewModel)
+        public void Add(CreateCrewViewModel Crew)
         {
-            var CrewEntity = new Crew(CrewModel.Name, CrewModel.Age, CrewModel.Rank);
+            var CrewEntity = new Crew(Crew.Name, Crew.Age, Crew.Rank);
 
             crewRepository.Add(CrewEntity);
 

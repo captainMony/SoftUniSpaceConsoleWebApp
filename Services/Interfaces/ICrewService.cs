@@ -7,7 +7,7 @@ namespace SoftUniSpaceConsoleWebApp.Services.Interfaces
     {
         void Add(CreateCrewViewModel crewMember);
 
-        public void Add(CreateCrewViewModel crewMember)
+        public void Add()
         {
 
         }

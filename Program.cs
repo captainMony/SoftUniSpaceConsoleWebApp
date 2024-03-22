@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using SoftUniSpaceConsoleWebApp.Data;
+using SoftUniSpaceConsoleWebApp.Repositories;
+using SoftUniSpaceConsoleWebApp.Repositories.Interfaces;
+using SoftUniSpaceConsoleWebApp.Services;
+using SoftUniSpaceConsoleWebApp.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 //string connectionString = builder.Configuration.GetConnectionString("ApplicationContextConnectionString"); 
 ////???? ? ????? Configuration e appsettings.json
+
+
 //if (connectionString != null )
 //{
 //    throw new InvalidDataException("COnnection string is not found bruh ApplicationContextConnectionString");
@@ -15,7 +21,7 @@ var builder = WebApplication.CreateBuilder(args);
 //
 
 string connectionString =
-    builder.Configuration.GetConnectionString("ApplicationContextConnectionString") ??
+    builder.Configuration.GetConnectionString("ApplicationContextConnectionString") ?? //ona neraboti a tova da??
     throw new InvalidDataException("No connection string dude");
 
 
@@ -23,9 +29,12 @@ string connectionString =
 builder.Services.AddControllersWithViews();
 
 
-
-
 builder.Services.AddDbContext<ApplicationContext>(context => context.UseMySQL(connectionString));
+
+builder.Services.AddScoped<ICrewRepository, CrewRepository>();
+builder.Services.AddScoped<ICrewService, CrewService>();
+
+builder.Services.AddRazorPages(); // ok qasno?????????????????????????
 
 
 
