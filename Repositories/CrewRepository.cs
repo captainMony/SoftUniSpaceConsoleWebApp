@@ -17,7 +17,10 @@ namespace SoftUniSpaceConsoleWebApp.Repositories
         {
             context.Crewmen.Add(Crew);  
             context.SaveChanges();  
-
         }
+
+        public IEnumerable<Crew> GetAll()
+        => context.Crewmen.ToList();    //Crewmen ot DB SET!!!???
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SoftUniSpaceConsoleWebApp.Models;
+using SoftUniSpaceConsoleWebApp.Models.Crew;
 using SoftUniSpaceConsoleWebApp.Services;
 using SoftUniSpaceConsoleWebApp.Services.Interfaces;
 
@@ -19,7 +20,13 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var crews = crewService.GetAll();
+
+          //  var Crews = CrewEntities
+          //      .Select(crew => new CrewViewModel(crew.Id, crew.Name, crew.Age, crew.rank)); // NOTE CREW IS WITH c not C
+          // tova e sa service... bruh
+
+            return View(crews);
         }
 
 
