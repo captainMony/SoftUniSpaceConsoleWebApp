@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SoftUniSpaceConsoleWebApp.Models;
+using SoftUniSpaceConsoleWebApp.Services;
 using SoftUniSpaceConsoleWebApp.Services.Interfaces;
 
 namespace SoftUniSpaceConsoleWebApp.Controllers
@@ -9,6 +10,12 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
     {
         
         private readonly ICrewService crewService; // ok 2
+
+
+        public CrewController(ICrewService crewService) // i forgot this makes Crewserivee
+        {
+            this.crewService = crewService;
+        }
 
         public IActionResult Index()
         {
@@ -23,10 +30,9 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
 
         [HttpPost]
 
-        public IActionResult Create(CreateCrewViewModel Crew) // ok 2
+        public IActionResult Create(CreateCrewViewModel Crew) // ok 2 //kak podavam danniete e problema??? Age e no@
         {
             crewService.Add(Crew); //ZASHTO NE RA BO TI ??????????????????? TO DO 
-
 
             return RedirectToAction(nameof(Index));
         }

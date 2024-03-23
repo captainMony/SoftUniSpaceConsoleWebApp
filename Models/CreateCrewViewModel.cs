@@ -6,6 +6,6 @@
 
         public int Age { get; set; }
 
-        public string Rank { get; set; }
+        public string Rank { get; set; } //ITS NOT ROLE I FORGOT
     }
 }

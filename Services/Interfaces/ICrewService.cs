@@ -9,7 +9,6 @@ namespace SoftUniSpaceConsoleWebApp.Services.Interfaces
 
         public void Add()
         {
-
         }
 
     }
