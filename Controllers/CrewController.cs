@@ -13,7 +13,7 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
         private readonly ICrewService crewService; // ok 2
 
 
-        public CrewController(ICrewService crewService) // i forgot this makes Crewserivee
+        public CrewController(ICrewService crewService) // i forgot this makes Crewservice
         {
             this.crewService = crewService;
         }
@@ -22,25 +22,29 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
         {
             var crews = crewService.GetAll();
 
-            //  var Crews = CrewEntities
-            //      .Select(crew => new CrewViewModel(crew.Id, crew.Name, crew.Age, crew.rank)); // NOTE CREW IS WITH c not C
-            // tova e sa service... bruh
-
-            return View(crews);
+            return View(crews); // otizame w view
         }
 
         public IActionResult Create() //tova e definirano v _Layout.cshtml.
         {
-            return View(); //posle otiva v views
+            return View(); //posle otiva v views// da pokaza stranizata s poletata
         }
 
         [HttpPost]
 
-        public IActionResult Create(CreateCrewViewModel Crew) // ok 2 //kak podavam danniete e problema??? Age e no@
+        public IActionResult Create(CreateCrewViewModel Crew) // ok 2 
         {
-            crewService.Add(Crew); //ZASHTO NE RA BO TI ??????????????????? TO DO 
+            crewService.Add(Crew); //Peak definiton
 
             return RedirectToAction(nameof(Index));
         }
+
+      //  public IActionResult Delete(id)
+      //  {
+      //      crewService.Delete(int id);
+      //
+      //      return RedirectToAction(nameof(Index));
+      //
+      //  }
     }
 }
