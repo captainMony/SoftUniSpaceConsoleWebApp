@@ -22,13 +22,12 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
         {
             var crews = crewService.GetAll();
 
-          //  var Crews = CrewEntities
-          //      .Select(crew => new CrewViewModel(crew.Id, crew.Name, crew.Age, crew.rank)); // NOTE CREW IS WITH c not C
-          // tova e sa service... bruh
+            //  var Crews = CrewEntities
+            //      .Select(crew => new CrewViewModel(crew.Id, crew.Name, crew.Age, crew.rank)); // NOTE CREW IS WITH c not C
+            // tova e sa service... bruh
 
             return View(crews);
         }
-
 
         public IActionResult Create() //tova e definirano v _Layout.cshtml.
         {
