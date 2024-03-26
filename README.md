@@ -6,7 +6,7 @@ Project Members:
 3. Tsvetan Nedelchev
 
 
-Project Theme: SpaceShipConsole 
+Project Theme: SpaceConsole 
 
 
 Project Description: To be written 
