@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SoftUniSpaceConsoleWebApp.Models;
 using SoftUniSpaceConsoleWebApp.Models.Crew;
 using SoftUniSpaceConsoleWebApp.Services;
 using SoftUniSpaceConsoleWebApp.Services.Interfaces;

@@ -6,9 +6,9 @@ namespace SoftUniSpaceConsoleWebApp.Repositories.Interfaces
     {
         void Add(Crew crew);
 
-
-
         IEnumerable<Crew> GetAll(); //138
 
+       // void Delete(Crew crew);
+        void Delete(int id);
     }
 }

@@ -1,6 +1,8 @@
-﻿namespace SoftUniSpaceConsoleWebApp.Services
+﻿using SoftUniSpaceConsoleWebApp.Services.Interfaces;
+
+namespace SoftUniSpaceConsoleWebApp.Services
 {
-    public class ShipService
+    public class ShipService : IShipService
     {
     }
 }

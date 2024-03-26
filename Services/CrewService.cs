@@ -1,6 +1,5 @@
 ﻿using MySqlX.XDevAPI.CRUD;
 using SoftUniSpaceConsoleWebApp.Data.Entities;
-using SoftUniSpaceConsoleWebApp.Models;
 using SoftUniSpaceConsoleWebApp.Models.Crew;
 using SoftUniSpaceConsoleWebApp.Repositories.Interfaces;
 using SoftUniSpaceConsoleWebApp.Services.Interfaces;
@@ -36,9 +35,15 @@ namespace SoftUniSpaceConsoleWebApp.Services
             return crews;
         }
 
-        public void Delete(int id) => crewRepository.Delete(id); //Step 2 call Repository Delete Method 
+        public void Delete(int id) 
+            => crewRepository.Delete(id); //Step 2 call Repository Delete Method 
 
+        public CrewViewModel Get(int id)
+        {
+            var crewid = crewRepository.Get(id);
 
+            return new CrewViewModel(crewid);
+        }
 
     }
 }

@@ -7,7 +7,7 @@ namespace SoftUniSpaceConsoleWebApp.Repositories
 {
     public class CrewRepository : ICrewRepository
     {
-        private readonly ApplicationContext context;
+        private readonly ApplicationContext context; //Context comes from here !!!
 
         public CrewRepository(ApplicationContext context)
         {
@@ -19,11 +19,19 @@ namespace SoftUniSpaceConsoleWebApp.Repositories
             context.SaveChanges();  
         }
        
-        public IEnumerable<Crew> GetAll() //Context???
+        public IEnumerable<Crew> GetAll() //Context??? oh... 
         => context.Crewmen.ToList();    //Crewmen ot DB SET!!!???
 
-        public void Delete(int Id) //12:39 Last 25/03
-       
+        public void Delete(int id)
+        {
+            var crewmemberid = Get(id);       //UNABLE to Get(id)?? Get does not exist ??
+                context.Crewmen.Remove(crewmemberid);
+                context.SaveChanges() ;
+
+        }
+
+        public Crew Get(int id) //
+           => context.Crewmen.FirstOrDefault(CrewmansID => CrewmansID.Id == id); //Hover over FirstOrDefault for explanation duh
 
     }
 }
