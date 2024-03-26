@@ -8,6 +8,7 @@ namespace SoftUniSpaceConsoleWebApp.Data
     {
         public DbSet<Crew> Crewmen {  get; set; }
 
+        public DbSet<Ship> DbShips { get; set; }  
 
         public ApplicationContext(DbContextOptions<ApplicationContext>options) 
             :base(options)

@@ -13,10 +13,11 @@
 <table class="table">
     <thead>
         <tr>
-            <Lable>Ship Crew </Lable>
+            <Lable> Crew List </Lable>
             <th scope="col">Name</th>
             <th scope="col">Age</th>
             <th scope="col">Rank</th>
+            <th scope="col">Ship Member of</th>
             <th scope="col">Delete</th>
         </tr>
     </thead>
@@ -30,6 +31,21 @@
                 <th>@Crew.Age </th>
 
                 <th>@Crew.Rank</th>
+
+                <th>
+                    <button>
+                        <a 
+                            asp-controller="Crew"
+                            asp-action="Delete"
+                            asp-route-id="@Crew.Id">
+                        Delete?
+                        </a>
+
+                    </button>
+
+
+
+                </th>
    
             </tr>
 

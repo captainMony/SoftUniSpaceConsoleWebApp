@@ -6,14 +6,14 @@ using SoftUniSpaceConsoleWebApp.Services.Interfaces;
 
 namespace SoftUniSpaceConsoleWebApp.Controllers
 {
-    public class CrewController : Controller // REMOVED A 1 FROM CREWCONTROLLER WAS: CrewController1 oops 
+    public class CrewController : Controller 
 
     {
         
-        private readonly ICrewService crewService; // ok 2
+        private readonly ICrewService crewService; 
 
 
-        public CrewController(ICrewService crewService) // i forgot this makes Crewservice
+        public CrewController(ICrewService crewService) //!!!
         {
             this.crewService = crewService;
         }
@@ -27,10 +27,10 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
 
         public IActionResult Create() //tova e definirano v _Layout.cshtml.
         {
-            return View(); //posle otiva v views// da pokaza stranizata s poletata
+            return View(); 
         }
 
-        [HttpPost]
+        [HttpPost] // от страницата идва тука затова Views е във <Form><>
 
         public IActionResult Create(CreateCrewViewModel Crew) // ok 2 
         {
@@ -39,12 +39,12 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-      //  public IActionResult Delete(id)
-      //  {
-      //      crewService.Delete(int id);
-      //
-      //      return RedirectToAction(nameof(Index));
-      //
-      //  }
+         public IActionResult Delete(int id) // From Views/Crew/Index.cshtml 
+         {
+             crewService.Delete(id); //Step 1 go to Service and call Delete method 
+
+            return RedirectToAction(nameof(Index));
+        
+         }
     }
 }

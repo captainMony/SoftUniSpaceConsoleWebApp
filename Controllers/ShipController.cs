@@ -1,0 +1,15 @@
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace SoftUniSpaceConsoleWebApp.Controllers
+{
+    public class ShipController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        //public IActionResult Get all?
+
+    }
+}

@@ -35,5 +35,10 @@ namespace SoftUniSpaceConsoleWebApp.Services
 
             return crews;
         }
+
+        public void Delete(int id) => crewRepository.Delete(id); //Step 2 call Repository Delete Method 
+
+
+
     }
 }
