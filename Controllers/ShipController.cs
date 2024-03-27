@@ -15,5 +15,10 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
         }
         //public IActionResult Get all?
 
+        public IActionResult Delete() 
+        {
+         return View();
+        }
+
     }
 }

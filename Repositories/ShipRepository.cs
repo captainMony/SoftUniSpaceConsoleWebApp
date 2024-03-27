@@ -9,7 +9,6 @@ namespace SoftUniSpaceConsoleWebApp.Repositories
     {
 
 
-
         private readonly ApplicationContext context; //Context comes from here !!!
 
         public ShipRepository(ApplicationContext context)
