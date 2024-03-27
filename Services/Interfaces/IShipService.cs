@@ -7,7 +7,7 @@ namespace SoftUniSpaceConsoleWebApp.Services.Interfaces
     {
 
 
-        void Add(CreateShipViewModel crewMember);
+        void Add(CreateShipViewModel Ship);
 
         IEnumerable<ShipViewModel> GetAll();
 

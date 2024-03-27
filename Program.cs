@@ -33,8 +33,12 @@ builder.Services.AddDbContext<ApplicationContext>(context => context.UseMySQL(co
 
 builder.Services.AddScoped<ICrewRepository, CrewRepository>();
 builder.Services.AddScoped<ICrewService, CrewService>();
+
 builder.Services.AddScoped<IShipRepository, ShipRepository>();
 builder.Services.AddScoped<IShipService, ShipService>();    
+
+builder.Services.AddScoped<ISolarSystemRepository, SolarSystemRepository>();
+builder.Services.AddScoped<ISolarSystemService, SolarSystemService>();
 
 
 builder.Services.AddRazorPages(); // ok qasno?????????????????????????

@@ -10,6 +10,9 @@ namespace SoftUniSpaceConsoleWebApp.Data
 
         public DbSet<Ship> Ship { get; set; }  //Also name of the table in the DB
 
+        public DbSet<SolarSystem> SolarSystem { get; set; } //
+
+
         public ApplicationContext(DbContextOptions<ApplicationContext>options) 
             :base(options)
         { }

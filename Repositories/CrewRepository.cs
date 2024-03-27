@@ -31,10 +31,10 @@ namespace SoftUniSpaceConsoleWebApp.Repositories
 
         }
 
-        public Crew Get(int id) //Catch 22 Needs get to make a get?
+        public Crew Get(int id) //The get i made and use
            => context.Crewmen.FirstOrDefault(CrewmansID => CrewmansID.Id == id); //Hover over FirstOrDefault for explanation duh
 
-        CrewViewModel ICrewRepository.Get(int id) //it works like this??? 
+        CrewViewModel ICrewRepository.Get(int id) //The get the interface wants??
         {
             throw new NotImplementedException();
         }
