@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
+using System.ComponentModel.DataAnnotations;
 
 namespace SoftUniSpaceConsoleWebApp.Data.Entities
 {
@@ -15,10 +16,16 @@ namespace SoftUniSpaceConsoleWebApp.Data.Entities
         [Required]
         public string Rank { get; set; }
 
+        public Crew() { }
+
+      //  public Crew(int id, string name, int age,string rank) ?????????
+      //      : this(name, age, rank)
+      //  {
+      //      Id = id;
+      //  }
 
         public Crew( string name, int age, string rank)
         {
-          
             Name = name;
             Age = age;
             Rank = rank;

@@ -1,4 +1,5 @@
 ﻿using SoftUniSpaceConsoleWebApp.Data.Entities;
+using SoftUniSpaceConsoleWebApp.Models.Crew;
 
 namespace SoftUniSpaceConsoleWebApp.Repositories.Interfaces
 {
@@ -10,5 +11,7 @@ namespace SoftUniSpaceConsoleWebApp.Repositories.Interfaces
 
        // void Delete(Crew crew);
         void Delete(int id);
+
+        CrewViewModel Get(int id);
     }
 }

@@ -11,5 +11,9 @@ namespace SoftUniSpaceConsoleWebApp.Services.Interfaces
 
         IEnumerable<ShipViewModel> GetAll();
 
+        void Delete(int id);
+
+        ShipViewModel Get(int id);
+
     }
 }

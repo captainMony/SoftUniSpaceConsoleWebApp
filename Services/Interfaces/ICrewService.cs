@@ -11,7 +11,7 @@ namespace SoftUniSpaceConsoleWebApp.Services.Interfaces
 
         void Delete(int id);
 
-
+        CrewViewModel Get(int id);
 
     }
 }

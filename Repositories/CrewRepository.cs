@@ -1,5 +1,6 @@
 ﻿using SoftUniSpaceConsoleWebApp.Data;
 using SoftUniSpaceConsoleWebApp.Data.Entities;
+using SoftUniSpaceConsoleWebApp.Models.Crew;
 using SoftUniSpaceConsoleWebApp.Repositories.Interfaces;
 using System.Net.Http.Headers;
 
@@ -33,5 +34,9 @@ namespace SoftUniSpaceConsoleWebApp.Repositories
         public Crew Get(int id) //
            => context.Crewmen.FirstOrDefault(CrewmansID => CrewmansID.Id == id); //Hover over FirstOrDefault for explanation duh
 
+        CrewViewModel ICrewRepository.Get(int id) //it works like this??? Catch 22
+        {
+            throw new NotImplementedException();
+        }
     }
 }

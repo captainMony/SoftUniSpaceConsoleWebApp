@@ -1,4 +1,5 @@
 ﻿using SoftUniSpaceConsoleWebApp.Data.Entities;
+using SoftUniSpaceConsoleWebApp.Models.Ship;
 
 namespace SoftUniSpaceConsoleWebApp.Repositories.Interfaces
 {
@@ -6,11 +7,11 @@ namespace SoftUniSpaceConsoleWebApp.Repositories.Interfaces
     {
         void Add(Ship ship);
 
-
-
         IEnumerable<Ship> GetAll();
 
+        void Delete(int id);
 
+        ShipViewModel Get(int id);
 
     }
 }

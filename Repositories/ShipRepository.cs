@@ -1,5 +1,6 @@
 ﻿using SoftUniSpaceConsoleWebApp.Data;
 using SoftUniSpaceConsoleWebApp.Data.Entities;
+using SoftUniSpaceConsoleWebApp.Models.Ship;
 using SoftUniSpaceConsoleWebApp.Repositories.Interfaces;
 
 namespace SoftUniSpaceConsoleWebApp.Repositories
@@ -17,6 +18,16 @@ namespace SoftUniSpaceConsoleWebApp.Repositories
         }
 
         public void Add(Ship ship)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ShipViewModel Get(int id)
         {
             throw new NotImplementedException();
         }

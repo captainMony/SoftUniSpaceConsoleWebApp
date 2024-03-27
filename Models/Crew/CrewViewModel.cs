@@ -11,12 +11,17 @@
 
         public string Rank { get; set; }
 
-        public CrewViewModel(int id, string name, int age, string rank)
+
+       public CrewViewModel(int id, string name, int age, string rank)
+       {
+           Id = id;
+           Name = name;
+           Age = age;
+           Rank = rank;
+       }
+
+        public CrewViewModel(CrewViewModel crewid)
         {
-            Id = id;
-            Name = name;
-            Age = age;
-            Rank = rank;
         }
     }
 }
