@@ -18,7 +18,10 @@ namespace SoftUniSpaceConsoleWebApp.Repositories
 
         public void Add(Ship ship)
         {
-            throw new NotImplementedException();
+           
+            context.Ship.Add(ship);
+            context.SaveChanges();
+
         }
 
         public void Delete(int id)

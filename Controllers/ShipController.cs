@@ -1,12 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SoftUniSpaceConsoleWebApp.Models.Crew;
+
 using SoftUniSpaceConsoleWebApp.Models.Ship;
 using SoftUniSpaceConsoleWebApp.Services;
+using SoftUniSpaceConsoleWebApp.Services.Interfaces;
 
 namespace SoftUniSpaceConsoleWebApp.Controllers
 {
     public class ShipController : Controller
     {
+        private readonly IShipService shipService;
+
+        public ShipController(IShipService shipService)
+        {
+            this.shipService = shipService;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -16,8 +24,7 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
         {
             return View();
         }
-        //public IActionResult Get all?
-
+       
 
         [HttpPost]
         public IActionResult Create(CreateShipViewModel Ship)
@@ -29,7 +36,9 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
           //     return RedirectToAction(nameof(Index));
           // }
 
-            shipService.Add
+            shipService.Add(Ship);
+
+            return RedirectToAction(nameof(Index));
 
 
         }
