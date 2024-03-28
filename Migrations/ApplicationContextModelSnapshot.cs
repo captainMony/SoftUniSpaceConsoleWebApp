@@ -37,16 +37,13 @@ namespace SoftUniSpaceConsoleWebApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Crewmen");
+                    b.ToTable("Crewmen", (string)null);
                 });
 
             modelBuilder.Entity("SoftUniSpaceConsoleWebApp.Data.Entities.Ship", b =>
                 {
                     b.Property<int>("ShipId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<int>("FkCrewId")
                         .HasColumnType("int");
 
                     b.Property<int>("ShipAge")
@@ -58,9 +55,7 @@ namespace SoftUniSpaceConsoleWebApp.Migrations
 
                     b.HasKey("ShipId");
 
-                    b.HasIndex("FkCrewId");
-
-                    b.ToTable("Ship");
+                    b.ToTable("Ship", (string)null);
                 });
 
             modelBuilder.Entity("SoftUniSpaceConsoleWebApp.Data.Entities.SolarSystem", b =>
@@ -75,18 +70,7 @@ namespace SoftUniSpaceConsoleWebApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SolarSystem");
-                });
-
-            modelBuilder.Entity("SoftUniSpaceConsoleWebApp.Data.Entities.Ship", b =>
-                {
-                    b.HasOne("SoftUniSpaceConsoleWebApp.Data.Entities.Crew", "ShipCrew")
-                        .WithMany()
-                        .HasForeignKey("FkCrewId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ShipCrew");
+                    b.ToTable("SolarSystem", (string)null);
                 });
 #pragma warning restore 612, 618
         }

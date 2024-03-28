@@ -29,12 +29,7 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
         [HttpPost]
         public IActionResult Create(CreateShipViewModel Ship)
         {
-          // public IActionResult Create(CreateCrewViewModel Crew) // ok 2 
-          // {
-          //     crewService.Add(Crew); //Peak definiton
-          //
-          //     return RedirectToAction(nameof(Index));
-          // }
+    
 
             shipService.Add(Ship);
 

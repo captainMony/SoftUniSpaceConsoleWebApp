@@ -9,8 +9,11 @@
 
         public int ShipAge { get; set; }
 
-      
-
-
+        public ShipViewModel(int shipId, string shipName, int shipAge)
+        {
+            ShipId = shipId;
+            ShipName = shipName;
+            ShipAge = shipAge;
+        }
     }
 }
