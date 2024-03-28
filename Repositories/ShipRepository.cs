@@ -26,15 +26,20 @@ namespace SoftUniSpaceConsoleWebApp.Repositories
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var shipid = Get(id);       
+            context.Ship.Remove(shipid);
+            context.SaveChanges();
         }
+                 
 
-        public ShipViewModel Get(int id)
-        {
-            throw new NotImplementedException();
-        }
 
-        public IEnumerable<Ship> GetAll()
+        public Ship Get(int id)
+        => context.Ship.FirstOrDefault(ShipsID => ShipsID.ShipId == id);
+
+        public IEnumerable<Ship> GetAll()     
+        => context.Ship.ToList();
+
+        ShipViewModel IShipRepository.Get(int id) //QUICK FIX IF INTERFACE WANTS GET METHOD LEAVE AS IS 
         {
             throw new NotImplementedException();
         }

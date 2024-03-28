@@ -23,18 +23,22 @@ namespace SoftUniSpaceConsoleWebApp.Services
         }
        
         public void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
+        => shipRepository.Delete(id); 
 
         public ShipViewModel Get(int id)
         {
-            throw new NotImplementedException();
+            var shipid = shipRepository.Get(id);
+
+            return new ShipViewModel(shipid); //QUICK FIX THIS
         }
 
         public IEnumerable<ShipViewModel> GetAll()
         {
-            throw new NotImplementedException();
+            var ShipEntities = shipRepository.GetAll();
+
+            var ships = ShipEntities.Select(Ship => new ShipViewModel(Ship.ShipId,Ship.ShipName,Ship.ShipAge));
+
+            return ships;
         }
     }
 }

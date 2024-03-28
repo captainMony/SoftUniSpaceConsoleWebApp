@@ -15,9 +15,11 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
             this.shipService = shipService;
         }
 
-        public IActionResult Index()
+        public IActionResult Index() //1 
         {
-            return View();
+            var ships = shipService.GetAll();
+
+            return View(ships); // otizame w view
         }
 
         public IActionResult Create()
@@ -37,9 +39,11 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
 
 
         }
-        public IActionResult Delete() 
+        public IActionResult Delete(int id) 
         {
-         return View();
+            shipService.Delete(id); //Step 1 go to Service and call Delete method 
+
+            return RedirectToAction(nameof(Index));
         }
 
     }

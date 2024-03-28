@@ -17,7 +17,7 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
             this.crewService = crewService;
         }
 
-        public IActionResult Index()
+        public IActionResult Index() //1
         {
             var crews = crewService.GetAll();
 

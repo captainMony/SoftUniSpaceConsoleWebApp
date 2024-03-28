@@ -42,7 +42,7 @@ namespace SoftUniSpaceConsoleWebApp.Services
         {
             var crewid = crewRepository.Get(id);
 
-            return new CrewViewModel(crewid);
+            return new CrewViewModel(crewid); //QUICK FIX THIS 
         }
 
 
