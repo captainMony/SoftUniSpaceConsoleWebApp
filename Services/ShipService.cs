@@ -1,13 +1,22 @@
 ﻿using SoftUniSpaceConsoleWebApp.Models.Ship;
+using SoftUniSpaceConsoleWebApp.Repositories.Interfaces;
 using SoftUniSpaceConsoleWebApp.Services.Interfaces;
 
 namespace SoftUniSpaceConsoleWebApp.Services
 {
     public class ShipService : IShipService
     {
-        public void Add(CreateShipViewModel crewMember)
+        private readonly IShipRepository shipRepository;
+
+
+        public ShipService(IShipRepository shipRepository) //Constructor we use to Dependency inject??
         {
-            throw new NotImplementedException();
+            this.shipRepository = shipRepository;   
+
+        } 
+        public void Add(CreateShipViewModel Ship)
+        {
+            
         }
        
         public void Delete(int id)
