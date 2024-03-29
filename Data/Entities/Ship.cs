@@ -14,11 +14,17 @@ namespace SoftUniSpaceConsoleWebApp.Data.Entities
         [Required]
         public int ShipAge { get; set; } //Years old like Crew
 
+        [Required]
+        public string UniverseGroup { get; set; }
 
-        public Ship(string shipName, int shipAge)
+
+
+
+        public Ship(string shipName, int shipAge,string universeGroup)
         {
             ShipName = shipName;
             ShipAge = shipAge;
+            UniverseGroup = universeGroup;
         }
     }
 }

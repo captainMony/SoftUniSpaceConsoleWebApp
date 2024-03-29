@@ -10,8 +10,8 @@ using SoftUniSpaceConsoleWebApp.Data;
 namespace SoftUniSpaceConsoleWebApp.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20240327164215_SolarSystem")]
-    partial class SolarSystem
+    [Migration("20240329155759_Ship")]
+    partial class Ship
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,6 +56,10 @@ namespace SoftUniSpaceConsoleWebApp.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("UniverseGroup")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.HasKey("ShipId");
 
                     b.ToTable("Ship");
@@ -71,9 +75,32 @@ namespace SoftUniSpaceConsoleWebApp.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("UniverseGroup")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.HasKey("Id");
 
                     b.ToTable("SolarSystem");
+                });
+
+            modelBuilder.Entity("SoftUniSpaceConsoleWebApp.Data.Entities.SpaceStation", b =>
+                {
+                    b.Property<int>("SpaceStationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("SpaceStationName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("UniverseGroup")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("SpaceStationId");
+
+                    b.ToTable("SpaceStation");
                 });
 #pragma warning restore 612, 618
         }

@@ -9,5 +9,7 @@
 
         public int ShipAge { get; set; }
 
+        public string UniverseGroup { get; set; }
+
     }
 }

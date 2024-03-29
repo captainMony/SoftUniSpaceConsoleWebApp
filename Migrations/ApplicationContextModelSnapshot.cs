@@ -53,6 +53,10 @@ namespace SoftUniSpaceConsoleWebApp.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("UniverseGroup")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.HasKey("ShipId");
 
                     b.ToTable("Ship", (string)null);
@@ -68,9 +72,32 @@ namespace SoftUniSpaceConsoleWebApp.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("UniverseGroup")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.HasKey("Id");
 
                     b.ToTable("SolarSystem", (string)null);
+                });
+
+            modelBuilder.Entity("SoftUniSpaceConsoleWebApp.Data.Entities.SpaceStation", b =>
+                {
+                    b.Property<int>("SpaceStationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("SpaceStationName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("UniverseGroup")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("SpaceStationId");
+
+                    b.ToTable("SpaceStation", (string)null);
                 });
 #pragma warning restore 612, 618
         }

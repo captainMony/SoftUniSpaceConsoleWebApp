@@ -18,7 +18,7 @@ namespace SoftUniSpaceConsoleWebApp.Services
         public void Add(CreateShipViewModel Ship)
         {
           
-            var ShipEntity = new Ship(Ship.ShipName, Ship.ShipAge);
+            var ShipEntity = new Ship(Ship.ShipName, Ship.ShipAge,Ship.UniverseGroup);
             shipRepository.Add(ShipEntity);
         }
        
@@ -36,7 +36,7 @@ namespace SoftUniSpaceConsoleWebApp.Services
         {
             var ShipEntities = shipRepository.GetAll();
 
-            var ships = ShipEntities.Select(Ship => new ShipViewModel(Ship.ShipId,Ship.ShipName,Ship.ShipAge));
+            var ships = ShipEntities.Select(Ship => new ShipViewModel(Ship.ShipId,Ship.ShipName,Ship.ShipAge,Ship.UniverseGroup));
 
             return ships;
         }
