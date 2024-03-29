@@ -1,23 +1,49 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
+using SoftUniSpaceConsoleWebApp.Models.Ship;
+using SoftUniSpaceConsoleWebApp.Services;
+using SoftUniSpaceConsoleWebApp.Services.Interfaces;
+
 namespace SoftUniSpaceConsoleWebApp.Controllers
 {
     public class ShipController : Controller
     {
-        public IActionResult Index()
+        private readonly IShipService shipService;
+
+        public ShipController(IShipService shipService)
         {
-            return View();
+            this.shipService = shipService;
+        }
+
+        public IActionResult Index() //1 
+        {
+            var ships = shipService.GetAll();
+
+            return View(ships); // otizame w view
         }
 
         public IActionResult Create()
         {
             return View();
         }
-        //public IActionResult Get all?
+       
 
-        public IActionResult Delete() 
+        [HttpPost]
+        public IActionResult Create(CreateShipViewModel Ship)
         {
-         return View();
+    
+
+            shipService.Add(Ship);
+
+            return RedirectToAction(nameof(Index));
+
+
+        }
+        public IActionResult Delete(int id) 
+        {
+            shipService.Delete(id); //Step 1 go to Service and call Delete method 
+
+            return RedirectToAction(nameof(Index));
         }
 
     }

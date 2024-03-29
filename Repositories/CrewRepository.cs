@@ -25,14 +25,14 @@ namespace SoftUniSpaceConsoleWebApp.Repositories
 
         public void Delete(int id)
         {
-            var crewmemberid = Get(id);       //UNABLE to Get(id)?? Get does not exist ??
+            var crewmemberid = Get(id);       //UNABLE to Get(id)?? Get does not exist ?? Needed Get method to GET THE ID 
                 context.Crewmen.Remove(crewmemberid);
                 context.SaveChanges() ;
 
         }
 
         public Crew Get(int id) //The get i made and use
-           => context.Crewmen.FirstOrDefault(CrewmansID => CrewmansID.Id == id); //Hover over FirstOrDefault for explanation duh
+           => context.Crewmen.FirstOrDefault(CrewmansID => CrewmansID.Id == id); 
 
         CrewViewModel ICrewRepository.Get(int id) //The get the interface wants??
         {

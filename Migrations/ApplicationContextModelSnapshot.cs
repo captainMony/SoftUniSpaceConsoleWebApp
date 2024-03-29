@@ -37,7 +37,7 @@ namespace SoftUniSpaceConsoleWebApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Crewmen");
+                    b.ToTable("Crewmen", (string)null);
                 });
 
             modelBuilder.Entity("SoftUniSpaceConsoleWebApp.Data.Entities.Ship", b =>
@@ -55,7 +55,7 @@ namespace SoftUniSpaceConsoleWebApp.Migrations
 
                     b.HasKey("ShipId");
 
-                    b.ToTable("Ship");
+                    b.ToTable("Ship", (string)null);
                 });
 
             modelBuilder.Entity("SoftUniSpaceConsoleWebApp.Data.Entities.SolarSystem", b =>
@@ -70,7 +70,7 @@ namespace SoftUniSpaceConsoleWebApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SolarSystem");
+                    b.ToTable("SolarSystem", (string)null);
                 });
 #pragma warning restore 612, 618
         }

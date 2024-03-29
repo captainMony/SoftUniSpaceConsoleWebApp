@@ -1,5 +1,52 @@
-﻿@*
+﻿@using SoftUniSpaceConsoleWebApp.Models.Ship;
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
+
+@model IEnumerable<ShipViewModel>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <Lable> SHip List </Lable>
+            <th scope="col">ShipName</th>
+            <th scope="col">ShipAge</th>
+     
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ship in Model) // NO IDEA WHAT MODEL IS !
+        {
+
+            <tr>
+                <th>@ship.ShipName</th>
+
+                <th>@ship.ShipAge </th>
+     
+
+                <th>
+                    <button>
+                        <a asp-controller="Ship"
+                           asp-action="Delete"
+                           asp-route-id="@ship.ShipId">
+                            Delete?
+                        </a>
+
+                    </button>
+
+
+
+                </th>
+
+            </tr>
+
+        }
+
+</table>
+
+    </tbody>
+</table>

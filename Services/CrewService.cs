@@ -24,7 +24,7 @@ namespace SoftUniSpaceConsoleWebApp.Services
 
             crewRepository.Add(CrewEntity);
 
-          
+          //emprty
         }
         public IEnumerable<CrewViewModel> GetAll()
         {
@@ -42,7 +42,7 @@ namespace SoftUniSpaceConsoleWebApp.Services
         {
             var crewid = crewRepository.Get(id);
 
-            return new CrewViewModel(crewid);
+            return new CrewViewModel(crewid); //QUICK FIX THIS 
         }
 
 
