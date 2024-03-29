@@ -31,8 +31,6 @@ namespace SoftUniSpaceConsoleWebApp.Repositories
             context.SaveChanges();
         }
                  
-
-
         public Ship Get(int id)
         => context.Ship.FirstOrDefault(ShipsID => ShipsID.ShipId == id);
 

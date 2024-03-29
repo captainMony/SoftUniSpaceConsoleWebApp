@@ -1,4 +1,4 @@
-﻿
+﻿using SoftUniSpaceConsoleWebApp.Data.Entities;
 using SoftUniSpaceConsoleWebApp.Models.Ship;
 
 namespace SoftUniSpaceConsoleWebApp.Services.Interfaces

@@ -1,0 +1,53 @@
+﻿@using SoftUniSpaceConsoleWebApp.Models.Planet
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model IEnumerable<PlanetViewModel>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <Lable> Planet List </Lable>
+            <th scope="col">Planet Name</th>
+            <th scope="col">Universe Group</th>
+
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var planet in Model) // NO IDEA WHAT MODEL IS !
+        {
+
+            <tr>
+                <th>@planet.Name</th>
+
+
+                <th>@planet.UniverseGroup</th>
+
+
+                <th>
+                    <button>
+                        <a asp-controller="Planet"
+                           asp-action="Delete"
+                           asp-route-id="@planet.Id">
+                            Delete?
+                        </a>
+
+                    </button>
+
+
+
+                </th>
+
+            </tr>
+
+        }
+
+</table>
+
+    </tbody>
+</table>

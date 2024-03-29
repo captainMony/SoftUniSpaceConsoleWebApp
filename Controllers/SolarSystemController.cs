@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SoftUniSpaceConsoleWebApp.Models.SolarSytem;
+using SoftUniSpaceConsoleWebApp.Models.SolarSystem;
 using SoftUniSpaceConsoleWebApp.Services;
 using SoftUniSpaceConsoleWebApp.Services.Interfaces;
 
@@ -10,7 +10,7 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
 
         private readonly ISolarSystemService solarSystemService;
 
-        public SolarSystemController(ISolarSystemService solarSytenService)
+        public SolarSystemController(ISolarSystemService solarSystemService)
         {
             this.solarSystemService = solarSystemService;
         }

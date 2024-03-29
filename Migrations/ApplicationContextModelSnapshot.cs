@@ -37,7 +37,26 @@ namespace SoftUniSpaceConsoleWebApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Crewmen", (string)null);
+                    b.ToTable("Crewmen");
+                });
+
+            modelBuilder.Entity("SoftUniSpaceConsoleWebApp.Data.Entities.Planet", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("UniverseGroup")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Planet");
                 });
 
             modelBuilder.Entity("SoftUniSpaceConsoleWebApp.Data.Entities.Ship", b =>
@@ -59,7 +78,7 @@ namespace SoftUniSpaceConsoleWebApp.Migrations
 
                     b.HasKey("ShipId");
 
-                    b.ToTable("Ship", (string)null);
+                    b.ToTable("Ship");
                 });
 
             modelBuilder.Entity("SoftUniSpaceConsoleWebApp.Data.Entities.SolarSystem", b =>
@@ -78,7 +97,7 @@ namespace SoftUniSpaceConsoleWebApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SolarSystem", (string)null);
+                    b.ToTable("SolarSystem");
                 });
 
             modelBuilder.Entity("SoftUniSpaceConsoleWebApp.Data.Entities.SpaceStation", b =>
@@ -97,7 +116,7 @@ namespace SoftUniSpaceConsoleWebApp.Migrations
 
                     b.HasKey("SpaceStationId");
 
-                    b.ToTable("SpaceStation", (string)null);
+                    b.ToTable("SpaceStation");
                 });
 #pragma warning restore 612, 618
         }

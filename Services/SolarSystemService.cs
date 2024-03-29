@@ -1,6 +1,5 @@
 ﻿
 using SoftUniSpaceConsoleWebApp.Data.Entities;
-
 using SoftUniSpaceConsoleWebApp.Models.SolarSystem;
 using SoftUniSpaceConsoleWebApp.Repositories;
 using SoftUniSpaceConsoleWebApp.Repositories.Interfaces;
@@ -22,9 +21,8 @@ namespace SoftUniSpaceConsoleWebApp.Services
         void ISolarSystemService.Add(CreateSolarSystemViewModel Systemd)
 
         {
-
-            var solarSystemEnitity = new SolarSystem(Systemd.Name, Systemd.UniverseGroup);//WHY HOW IS PROTECTION LEVER????
-            solarSystemRepository.Add(solarSystemEnitity); 
+           // var SystemEntity = new SolarSystem(Systemd.ToString);
+          
 
         }
 

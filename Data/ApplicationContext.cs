@@ -14,6 +14,8 @@ namespace SoftUniSpaceConsoleWebApp.Data
 
         public DbSet<SpaceStation> SpaceStation { get; set; }   
 
+        public DbSet<Planet> Planet { get; set; }
+
         public ApplicationContext(DbContextOptions<ApplicationContext>options) 
             :base(options)
         { }

@@ -1,4 +1,4 @@
-﻿using SoftUniSpaceConsoleWebApp.Models.Crew;
+﻿using SoftUniSpaceConsoleWebApp.Data.Entities;
 using SoftUniSpaceConsoleWebApp.Models.SolarSystem;
 
 namespace SoftUniSpaceConsoleWebApp.Services.Interfaces

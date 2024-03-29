@@ -10,8 +10,8 @@ using SoftUniSpaceConsoleWebApp.Data;
 namespace SoftUniSpaceConsoleWebApp.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20240329155759_Ship")]
-    partial class Ship
+    [Migration("20240329185418_Planet")]
+    partial class Planet
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,6 +41,25 @@ namespace SoftUniSpaceConsoleWebApp.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Crewmen");
+                });
+
+            modelBuilder.Entity("SoftUniSpaceConsoleWebApp.Data.Entities.Planet", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("UniverseGroup")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Planet");
                 });
 
             modelBuilder.Entity("SoftUniSpaceConsoleWebApp.Data.Entities.Ship", b =>
