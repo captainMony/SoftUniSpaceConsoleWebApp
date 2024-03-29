@@ -1,13 +1,26 @@
-﻿namespace SoftUniSpaceConsoleWebApp.Models.SolarSytem
+﻿using SoftUniSpaceConsoleWebApp.Models.Ship;
+
+namespace SoftUniSpaceConsoleWebApp.Models.SolarSystem
 {
     public class SolarSystemViewModel
     {
-        string SolarSytemId { get; set; }
+        public int Id { get; set; } // bruh
 
-        string SolarSystemName { get; set; } 
+        public string Name { get; set; }
 
+        public string UniverseGroup { get; set; }
+        public SolarSystemViewModel Systemid { get; }
 
+        public SolarSystemViewModel(int id, string name, string universeGroup)
+        {
+            Id = id;
+            Name = name;
+            UniverseGroup = universeGroup;
+        }
 
-
+        public SolarSystemViewModel(SolarSystemViewModel systemid)
+        {
+            Systemid = systemid;
+        }
     }
 }

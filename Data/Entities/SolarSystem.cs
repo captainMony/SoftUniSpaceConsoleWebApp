@@ -15,12 +15,12 @@ namespace SoftUniSpaceConsoleWebApp.Data.Entities
         [Required]
         public string UniverseGroup { get; set; }
 
-        public SolarSystem(int id, string name, string universeGroup)
+        public SolarSystem (string name, string universeGroup)
         {
-            Id = id;
-            Name = name;
-            UniverseGroup = universeGroup;
+            this.Name = name;
+            this.UniverseGroup = universeGroup;
         }
 
+       
     }
 }

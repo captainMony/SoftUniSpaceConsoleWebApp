@@ -1,27 +1,42 @@
-﻿using SoftUniSpaceConsoleWebApp.Data.Entities;
-using SoftUniSpaceConsoleWebApp.Models.SolarSytem;
+﻿using SoftUniSpaceConsoleWebApp.Data;
+using SoftUniSpaceConsoleWebApp.Data.Entities;
+using SoftUniSpaceConsoleWebApp.Migrations;
+using SoftUniSpaceConsoleWebApp.Models.SolarSystem;
 using SoftUniSpaceConsoleWebApp.Repositories.Interfaces;
 
 namespace SoftUniSpaceConsoleWebApp.Repositories
 {
     public class SolarSystemRepository : ISolarSystemRepository
     {
-        public void Add(Crew crew)
+        private readonly ApplicationContext context;
+
+        public SolarSystemRepository(ApplicationContext context)
         {
-            throw new NotImplementedException();
+            this.context = context;
+        }
+
+
+        public void Add(SolarSystem system)
+        {
+            context.SolarSystem.Add(system);
+            context.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+
+            var solarsystemid = Get(id);
+            context.SolarSystem.Remove(solarsystemid);
+            context.SaveChanges();
         }
 
-        public SolarSystemViewModel Get(int id)
-        {
-            throw new NotImplementedException();
-        }
+        public SolarSystem Get(int id) 
+         => context.SolarSystem.FirstOrDefault(ShipsID => ShipsID.Id == id);
 
         public IEnumerable<SolarSystem> GetAll()
+        => context.SolarSystem.ToList();
+
+        SolarSystemViewModel ISolarSystemRepository.Get(int id)//INTERFACE QUICKFIXED
         {
             throw new NotImplementedException();
         }

@@ -1,12 +1,52 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SoftUniSpaceConsoleWebApp.Models.SolarSytem;
+using SoftUniSpaceConsoleWebApp.Services;
+using SoftUniSpaceConsoleWebApp.Services.Interfaces;
 
 namespace SoftUniSpaceConsoleWebApp.Controllers
 {
     public class SolarSystemController : Controller
     {
-        public IActionResult Index()
+
+        private readonly ISolarSystemService solarSystemService;
+
+        public SolarSystemController(ISolarSystemService solarSytenService)
+        {
+            this.solarSystemService = solarSystemService;
+        }
+
+        public IActionResult Index() //1 
+        {
+            var system = solarSystemService.GetAll();
+
+            return View(system); // otizame w view
+        }
+
+        public IActionResult Create()
         {
             return View();
         }
+
+
+        [HttpPost]
+        public IActionResult Create(CreateSolarSystemViewModel System)
+        {
+
+
+            solarSystemService.Add(System);
+
+            return RedirectToAction(nameof(Index));
+
+
+        }
+        public IActionResult Delete(int id)
+        {
+            solarSystemService.Delete(id); //Step 1 go to Service and call Delete method 
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
+
     }
 }

@@ -17,9 +17,6 @@ namespace SoftUniSpaceConsoleWebApp.Data.Entities
         [Required]
         public string UniverseGroup { get; set; }
 
-
-
-
         public Ship(string shipName, int shipAge,string universeGroup)
         {
             ShipName = shipName;

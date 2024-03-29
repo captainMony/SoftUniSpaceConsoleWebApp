@@ -38,7 +38,7 @@ builder.Services.AddScoped<IShipRepository, ShipRepository>();
 builder.Services.AddScoped<IShipService, ShipService>();    
 
 builder.Services.AddScoped<ISolarSystemRepository, SolarSystemRepository>();
-builder.Services.AddScoped<ISolarSystemService, SolarSystemService>();//DONT FORGET 
+builder.Services.AddScoped<ISolarSystemService, SolarSystemService>(); //DONT FORGET 
 
 
 builder.Services.AddRazorPages(); // ok qasno?????????????????????????

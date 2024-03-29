@@ -1,5 +1,5 @@
 ﻿using SoftUniSpaceConsoleWebApp.Models.Crew;
-using SoftUniSpaceConsoleWebApp.Models.SolarSytem;
+using SoftUniSpaceConsoleWebApp.Models.SolarSystem;
 
 namespace SoftUniSpaceConsoleWebApp.Services.Interfaces
 {

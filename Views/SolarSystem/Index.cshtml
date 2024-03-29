@@ -1,5 +1,54 @@
-﻿@*
+﻿@using SoftUniSpaceConsoleWebApp.Models.SolarSystem
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
+
+@model IEnumerable<SolarSystemViewModel>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <Lable> System List </Lable>
+            <th scope="col">System Name</th>
+            <th scope="col">Universe Group</th>
+         
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var system in Model) // NO IDEA WHAT MODEL IS !
+        {
+
+            <tr>
+                <th>@system.Name</th>
+
+             
+
+                <th>@system.UniverseGroup</th>
+
+
+                <th>
+                    <button>
+                        <a asp-controller="SolarSystem"
+                           asp-action="Delete"
+                           asp-route-id="@system.Id">
+                            Delete?
+                        </a>
+
+                    </button>
+
+
+
+                </th>
+
+            </tr>
+
+        }
+
+</table>
+
+    </tbody>
+</table>

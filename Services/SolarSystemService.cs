@@ -1,5 +1,8 @@
-﻿using SoftUniSpaceConsoleWebApp.Models.Crew;
-using SoftUniSpaceConsoleWebApp.Models.SolarSytem;
+﻿
+using SoftUniSpaceConsoleWebApp.Data.Entities;
+
+using SoftUniSpaceConsoleWebApp.Models.SolarSystem;
+using SoftUniSpaceConsoleWebApp.Repositories;
 using SoftUniSpaceConsoleWebApp.Repositories.Interfaces;
 using SoftUniSpaceConsoleWebApp.Services.Interfaces;
 
@@ -7,24 +10,49 @@ namespace SoftUniSpaceConsoleWebApp.Services
 {
     public class SolarSystemService : ISolarSystemService
     {
-        void ISolarSystemService.Add(CreateSolarSystemViewModel SolarSystem)
+
+        private readonly ISolarSystemRepository solarSystemRepository;
+
+        public SolarSystemService(ISolarSystemRepository solarsystemRepository) //Constructor we use to Dependency inject??
         {
-            throw new NotImplementedException();
+            this.solarSystemRepository = solarsystemRepository;
+
         }
 
-        void ISolarSystemService.Delete(int id)
+        void ISolarSystemService.Add(CreateSolarSystemViewModel Systemd)
+
         {
-            throw new NotImplementedException();
+
+            var solarSystemEnitity = new SolarSystem(Systemd.Name, Systemd.UniverseGroup);//WHY HOW IS PROTECTION LEVER????
+            solarSystemRepository.Add(solarSystemEnitity); 
+
         }
 
-        SolarSystemViewModel ISolarSystemService.Get(int id)
+        public void Delete(int id)
+              => solarSystemRepository.Delete(id);
+
+
+        public SolarSystemViewModel Get(int id)
         {
-            throw new NotImplementedException();
+            var systemid = solarSystemRepository.Get(id);
+            
+            return new SolarSystemViewModel(systemid);
         }
 
-        IEnumerable<SolarSystemViewModel> ISolarSystemService.GetAll()
+     
+        public IEnumerable<SolarSystemViewModel> GetAll()
         {
-            throw new NotImplementedException();
+            var systemEntities = solarSystemRepository.GetAll();
+            var systems = systemEntities.Select(system => new SolarSystemViewModel(system.Id, system.Name, system.UniverseGroup));
+            return systems;
         }
+      //  public IEnumerable<ShipViewModel> GetAll()
+      //  {
+      //      var ShipEntities = shipRepository.GetAll();
+      //
+      //      var ships = ShipEntities.Select(Ship => new ShipViewModel(Ship.ShipId, Ship.ShipName, Ship.ShipAge, Ship.UniverseGroup));
+      //
+      //      return ships;
+      //  }
     }
 }
