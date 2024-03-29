@@ -2,7 +2,7 @@
 
 namespace SoftUniSpaceConsoleWebApp.Controllers
 {
-    public class SpaceStation : Controller
+    public class SpaceStationController : Controller
     {
         public IActionResult Index()
         {
