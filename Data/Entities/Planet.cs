@@ -13,11 +13,14 @@ namespace SoftUniSpaceConsoleWebApp.Data.Entities
         [Required]
         public string Type { get; set; }
 
+        [Required]
+        public string UniverseGroup { get; set; }
+
         public Planet(string name, string type)
         {
             Name = name;
-            Age = age;
             Type = type;
+            UniverseGroup = universeGroup;
         }
     }
 }
