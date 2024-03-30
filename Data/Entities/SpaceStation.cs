@@ -10,9 +10,13 @@ namespace SoftUniSpaceConsoleWebApp.Data.Entities
         [Required]
         public string Name { get; set; }
 
+        [Required]
+        public string UniverseGroup { get; set; }
+
         public SpaceStation(string name)
         {
             Name = name;
+            UniverseGroup = universeGroup;
         }
     }
 }
