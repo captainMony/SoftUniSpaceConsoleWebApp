@@ -32,7 +32,6 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
         public IActionResult Create(CreateSolarSystemViewModel System)
         {
 
-
             solarSystemService.Add(System);
 
             return RedirectToAction(nameof(Index));

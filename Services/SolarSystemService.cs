@@ -18,11 +18,10 @@ namespace SoftUniSpaceConsoleWebApp.Services
 
         }
 
-        void ISolarSystemService.Add(CreateSolarSystemViewModel Systemd)
+        void ISolarSystemService.Add(CreateSolarSystemViewModel System)
 
         {
-           // var SystemEntity = new SolarSystem(Systemd.ToString);
-          
+           // try to fix if not redo the table 
 
         }
 
