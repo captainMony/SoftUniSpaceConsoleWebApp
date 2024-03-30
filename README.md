@@ -9,6 +9,6 @@ Project Members:
 Project Theme: SpaceConsole 
 
 
-Project Description: To be written 
+Project Description Star Wars Rip Off! 
 
 
