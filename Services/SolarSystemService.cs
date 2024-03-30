@@ -33,7 +33,7 @@ namespace SoftUniSpaceConsoleWebApp.Services
         {
             var systemid = solarSystemRepository.Get(id);
             
-            return new SolarSystemViewModel(systemid);
+            return new SolarSystemViewModel(systemid); //DOESNT WORK TO DO
         }
 
      
@@ -43,13 +43,6 @@ namespace SoftUniSpaceConsoleWebApp.Services
             var systems = systemEntities.Select(system => new SolarSystemViewModel(system.Id, system.Name, system.UniverseGroup));
             return systems;
         }
-      //  public IEnumerable<ShipViewModel> GetAll()
-      //  {
-      //      var ShipEntities = shipRepository.GetAll();
-      //
-      //      var ships = ShipEntities.Select(Ship => new ShipViewModel(Ship.ShipId, Ship.ShipName, Ship.ShipAge, Ship.UniverseGroup));
-      //
-      //      return ships;
-      //  }
+     
     }
 }

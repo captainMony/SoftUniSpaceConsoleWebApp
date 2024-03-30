@@ -52,6 +52,15 @@ builder.Services.AddScoped<IMoonRepository, MoonRepository>();
 
 
 
+
+
+
+builder.Services.AddScoped<ISpaceStationRepository, SpaceStationRepository>();
+builder.Services.AddScoped<ISpaceStationService, SpaceStationService>();
+
+
+
+
 builder.Services.AddRazorPages(); // ok qasno?????????????????????????
 
 

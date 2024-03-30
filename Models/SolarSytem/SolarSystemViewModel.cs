@@ -4,6 +4,7 @@ namespace SoftUniSpaceConsoleWebApp.Models.SolarSystem
 {
     public class SolarSystemViewModel
     {
+       
         public int Id { get; set; } // bruh
         public string Name { get; set; }
         public string UniverseGroup { get; set; }
@@ -15,7 +16,7 @@ namespace SoftUniSpaceConsoleWebApp.Models.SolarSystem
             UniverseGroup = universeGroup;
         }
 
-        public SolarSystemViewModel(SolarSystemViewModel systemid)
+        public SolarSystemViewModel(Data.Entities.SolarSystem systemid)
         {
         }
     }

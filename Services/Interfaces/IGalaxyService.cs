@@ -10,13 +10,7 @@ namespace SoftUniSpaceConsoleWebApp.Services.Interfaces
 
         void Delete(int id);
         GalaxyViewModel Get(int id);
-        // void Add(CreateCrewViewModel crewMember);
-
-       //Enumerable<CrewViewModel> GetAll();
-       //
-       //oid Delete(int id);
-       //
-       //rewViewModel Get(int id);
+       
        
         
     }
