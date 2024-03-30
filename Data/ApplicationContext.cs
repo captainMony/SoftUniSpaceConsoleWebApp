@@ -18,6 +18,8 @@ namespace SoftUniSpaceConsoleWebApp.Data
 
         public DbSet<Galaxy> Galaxy { get; set; }
 
+        public DbSet<Moon> Moon { get; set; }
+
         public ApplicationContext(DbContextOptions<ApplicationContext>options) 
             :base(options)
         { }

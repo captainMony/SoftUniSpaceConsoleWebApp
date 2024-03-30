@@ -1,0 +1,53 @@
+﻿@using SoftUniSpaceConsoleWebApp.Models.Moon;
+@*
+
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<MoonViewModel>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <Lable> Moon List </Lable>
+            <th scope="col">Name</th>
+            <th scope="col">Size</th>
+            <th scope="col">UniverseGroup</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var moon in Model)
+        {
+
+            <tr>
+                <th>@moon.Name</th>
+
+                <th>@moon.Size</th>
+
+                <th>@moon.UniverseGroup</th>
+
+                <th>
+                    <button>
+                        <a asp-controller="Moon"
+                           asp-action="Delete"
+                           asp-route-id="@moon.Id">
+                            Delete?
+                        </a>
+
+                    </button>
+
+
+
+                </th>
+
+            </tr>
+
+        }
+
+</table>
+
+    </tbody>
+</table>
