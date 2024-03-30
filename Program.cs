@@ -46,6 +46,10 @@ builder.Services.AddScoped<IPlanetService, PlanetServices>(); //why s?
 builder.Services.AddScoped<IGalaxyReposiotry, GalaxyRepository>();
     builder.Services.AddScoped<IGalaxyService, GalaxyService>();
 
+builder.Services.AddScoped<IMoonService, MoonService>();
+builder.Services.AddScoped<IMoonRepository, MoonRepository>();
+
+
 
 
 
