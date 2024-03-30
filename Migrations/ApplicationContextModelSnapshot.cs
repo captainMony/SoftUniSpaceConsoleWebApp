@@ -40,6 +40,29 @@ namespace SoftUniSpaceConsoleWebApp.Migrations
                     b.ToTable("Crewmen");
                 });
 
+            modelBuilder.Entity("SoftUniSpaceConsoleWebApp.Data.Entities.Galaxy", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Color")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("UniverseGroup")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Galaxy");
+                });
+
             modelBuilder.Entity("SoftUniSpaceConsoleWebApp.Data.Entities.Planet", b =>
                 {
                     b.Property<int>("Id")

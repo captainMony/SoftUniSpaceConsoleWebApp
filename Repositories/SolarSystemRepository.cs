@@ -16,7 +16,7 @@ namespace SoftUniSpaceConsoleWebApp.Repositories
         }
 
 
-        public void Add(SolarSystem system)
+        public void Add(Data.Entities.SolarSystem system)
         {
             context.SolarSystem.Add(system);
             context.SaveChanges();
@@ -30,10 +30,10 @@ namespace SoftUniSpaceConsoleWebApp.Repositories
             context.SaveChanges();
         }
 
-        public SolarSystem Get(int id) 
+        public Data.Entities.SolarSystem Get(int id) 
          => context.SolarSystem.FirstOrDefault(ShipsID => ShipsID.Id == id);
 
-        public IEnumerable<SolarSystem> GetAll()
+        public IEnumerable<Data.Entities.SolarSystem> GetAll()
         => context.SolarSystem.ToList();
 
         SolarSystemViewModel ISolarSystemRepository.Get(int id)//INTERFACE QUICKFIXED

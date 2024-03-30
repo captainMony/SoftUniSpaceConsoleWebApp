@@ -6,11 +6,27 @@ using MySql.EntityFrameworkCore.Metadata;
 namespace SoftUniSpaceConsoleWebApp.Migrations
 {
     /// <inheritdoc />
-    public partial class Planet : Migration
+    public partial class AddTabales : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Galaxy",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(type: "longtext", nullable: false),
+                    Color = table.Column<string>(type: "longtext", nullable: false),
+                    UniverseGroup = table.Column<string>(type: "longtext", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Galaxy", x => x.Id);
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
+
             migrationBuilder.CreateTable(
                 name: "Planet",
                 columns: table => new
@@ -76,6 +92,9 @@ namespace SoftUniSpaceConsoleWebApp.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Galaxy");
+
             migrationBuilder.DropTable(
                 name: "Planet");
 

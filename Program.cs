@@ -43,6 +43,10 @@ builder.Services.AddScoped<ISolarSystemService, SolarSystemService>(); //DONT FO
 builder.Services.AddScoped<IPlanetRepo, PlanetRepo>();
 builder.Services.AddScoped<IPlanetService, PlanetServices>(); //why s?
 
+builder.Services.AddScoped<IGalaxyReposiotry, GalaxyRepository>();
+    builder.Services.AddScoped<IGalaxyService, GalaxyService>();
+
+
 
 builder.Services.AddRazorPages(); // ok qasno?????????????????????????
 

@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Create Crew Member</h1>
+
+<form method="post" asp-controller="Galaxy" asp-action="Create">
+
+    <p>
+        <label> Galaxy Name</label>
+        <input type="text" name="Name" />
+    </p>
+
+    <p>
+        <label>Galaxy Color</label>
+        <input type="text" name="Color" />
+
+    </p>
+
+    <p>
+
+        <label>Universe Group</label>
+        <input type="text" name="UniverseGroup" />
+
+    </p>
+
+    <button type="submit">Create</button>
+
+
+</form>

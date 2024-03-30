@@ -12,9 +12,11 @@ namespace SoftUniSpaceConsoleWebApp.Data
 
         public DbSet<SolarSystem> SolarSystem { get; set; } //
 
-        public DbSet<SpaceStation> SpaceStation { get; set; }   
+        public DbSet<SpaceStation> SpaceStation { get; set; }   //NOT DONE
 
         public DbSet<Planet> Planet { get; set; }
+
+        public DbSet<Galaxy> Galaxy { get; set; }
 
         public ApplicationContext(DbContextOptions<ApplicationContext>options) 
             :base(options)
