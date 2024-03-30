@@ -10,7 +10,7 @@ using SoftUniSpaceConsoleWebApp.Data;
 namespace SoftUniSpaceConsoleWebApp.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20240330152201_SpaceStation")]
+    [Migration("20240330163138_SpaceStation")]
     partial class SpaceStation
     {
         /// <inheritdoc />

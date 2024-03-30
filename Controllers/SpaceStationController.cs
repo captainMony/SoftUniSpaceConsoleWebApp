@@ -21,6 +21,13 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
             return View(spacespacestation);
 
         }
+        
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+
         [HttpPost]
 
         public IActionResult Create(CreateSpaceStationViewModel STATION)

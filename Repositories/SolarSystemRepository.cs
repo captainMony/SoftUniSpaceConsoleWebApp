@@ -1,6 +1,6 @@
 ﻿using SoftUniSpaceConsoleWebApp.Data;
 using SoftUniSpaceConsoleWebApp.Data.Entities;
-using SoftUniSpaceConsoleWebApp.Migrations;
+
 using SoftUniSpaceConsoleWebApp.Models.SolarSystem;
 using SoftUniSpaceConsoleWebApp.Repositories.Interfaces;
 

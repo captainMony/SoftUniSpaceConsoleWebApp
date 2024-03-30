@@ -16,7 +16,6 @@ namespace SoftUniSpaceConsoleWebApp.Data.Entities
 
         public SpaceStation(string name, string universeGroup)
         {
-           
             Name = name;
             UniverseGroup = universeGroup;
         }

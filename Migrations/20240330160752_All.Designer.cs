@@ -10,8 +10,8 @@ using SoftUniSpaceConsoleWebApp.Data;
 namespace SoftUniSpaceConsoleWebApp.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20240330104016_Add-Tabales")]
-    partial class AddTabales
+    [Migration("20240330160752_All")]
+    partial class All
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -128,11 +128,11 @@ namespace SoftUniSpaceConsoleWebApp.Migrations
 
             modelBuilder.Entity("SoftUniSpaceConsoleWebApp.Data.Entities.SpaceStation", b =>
                 {
-                    b.Property<int>("SpaceStationId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("SpaceStationName")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -140,7 +140,7 @@ namespace SoftUniSpaceConsoleWebApp.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.HasKey("SpaceStationId");
+                    b.HasKey("Id");
 
                     b.ToTable("SpaceStation");
                 });
