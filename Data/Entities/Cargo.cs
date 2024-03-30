@@ -16,11 +16,15 @@ namespace SoftUniSpaceConsoleWebApp.Data.Entities
         [Required]
         public double Quantity { get; set; }
 
+        [Required]
+        public string UniverseGroup { get; set; }
+
         public Cargo(string type, string name, double quantity)
         {
             Type = type;
             Name = name;
             Quantity = quantity;
+            UniverseGroup = universeGroup;
         }
     }
 }
