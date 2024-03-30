@@ -17,11 +17,11 @@ namespace SoftUniSpaceConsoleWebApp.Data
         public DbSet<Planet> Planet { get; set; }
 
         public DbSet<Galaxy> Galaxy { get; set; }
+        
+        
+        public DbSet<Moon> Moon { get; set; } //barte?
 
-
-
-        public DbSet<SpaceStation> SpaceStations { get; set; }
-
+        public DbSet<SpaceStation> SpaceStations { get; set; } //master
 
         public ApplicationContext(DbContextOptions<ApplicationContext>options) 
             :base(options)
