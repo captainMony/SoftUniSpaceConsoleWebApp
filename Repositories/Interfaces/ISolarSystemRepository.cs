@@ -5,13 +5,16 @@ namespace SoftUniSpaceConsoleWebApp.Repositories.Interfaces
 {
     public interface ISolarSystemRepository
     {
-        void Add(SolarSystem system);
+
+
+        void Add(SolarSystem spaceStation);
 
         IEnumerable<SolarSystem> GetAll();
 
         void Delete(int id);
 
-         SolarSystemViewModel Get(int id);
+        SolarSystem Get(int id);
+
 
 
     }

@@ -36,9 +36,6 @@ namespace SoftUniSpaceConsoleWebApp.Repositories
         public IEnumerable<Data.Entities.SolarSystem> GetAll()
         => context.SolarSystem.ToList();
 
-        SolarSystemViewModel ISolarSystemRepository.Get(int id)//INTERFACE QUICKFIXED
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

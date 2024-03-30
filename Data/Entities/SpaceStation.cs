@@ -5,20 +5,20 @@ namespace SoftUniSpaceConsoleWebApp.Data.Entities
     public class SpaceStation
     {
         [Key]
-
-        public int SpaceStationId { get; set; }
+        public int Id { get; set; }
 
         [Required]
 
-        public string SpaceStationName { get; set; }
+        public string Name { get; set; }
 
         [Required]
         public string UniverseGroup { get; set; }
 
-
-
-
-
-
+        public SpaceStation(string name, string universeGroup)
+        {
+           
+            Name = name;
+            UniverseGroup = universeGroup;
+        }
     }
 }

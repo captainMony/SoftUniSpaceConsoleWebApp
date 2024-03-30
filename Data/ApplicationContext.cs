@@ -18,6 +18,11 @@ namespace SoftUniSpaceConsoleWebApp.Data
 
         public DbSet<Galaxy> Galaxy { get; set; }
 
+
+
+        public DbSet<SpaceStation> SpaceStations { get; set; }
+
+
         public ApplicationContext(DbContextOptions<ApplicationContext>options) 
             :base(options)
         { }

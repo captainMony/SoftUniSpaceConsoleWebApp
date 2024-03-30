@@ -48,6 +48,15 @@ builder.Services.AddScoped<IGalaxyReposiotry, GalaxyRepository>();
 
 
 
+
+
+
+builder.Services.AddScoped<ISpaceStationRepository, SpaceStationRepository>();
+builder.Services.AddScoped<ISpaceStationService, SpaceStationService>();
+
+
+
+
 builder.Services.AddRazorPages(); // ok qasno?????????????????????????
 
 
