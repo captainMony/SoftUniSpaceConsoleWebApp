@@ -21,7 +21,8 @@ namespace SoftUniSpaceConsoleWebApp.Services
         void ISolarSystemService.Add(CreateSolarSystemViewModel System)
 
         {
-           // try to fix if not redo the table 
+           // var Entity = new SolarSystem(System.Na);
+           // solarSystemRepository.Add(Entity);
 
         }
 

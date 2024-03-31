@@ -30,9 +30,9 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
 
         [HttpPost]
 
-        public IActionResult Create(CreateSpaceStationViewModel STATION)
+        public IActionResult Create(CreateSpaceStationViewModel station)
         {
-            spaceStationService.Add(STATION);
+            spaceStationService.Add(station);
 
             return RedirectToAction(nameof(Index));
         }

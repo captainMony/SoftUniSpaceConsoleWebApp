@@ -13,9 +13,9 @@ namespace SoftUniSpaceConsoleWebApp.Repositories
             this.context = context;
         }
 
-        public void Add(SpaceStation spaceStation)
+        public void Add(SpaceStation spacestation)
         {
-            context.SpaceStation.Add(spaceStation);
+            context.SpaceStation.Add(spacestation);
             context.SaveChanges();
         }
 
