@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Create Cargo</h1>
+
+<form method="post" asp-controller="Cargo" asp-action="Create">
+
+    <p>
+        <label>Name</label>
+        <input type="text" name="Name" />
+    </p>
+
+    <p>
+
+        <label>Quantity</label>
+        <input type="number" step="any" name="Quantity" />
+
+
+    </p>
+
+    <p>
+
+        <label>Quantity</label>
+        <input type="text" name="Type" />
+
+    </p>
+
+    <button type="submit">Create</button>
+
+
+</form>

@@ -49,6 +49,8 @@ builder.Services.AddScoped<IGalaxyReposiotry, GalaxyRepository>();
 builder.Services.AddScoped<IMoonService, MoonService>();
 builder.Services.AddScoped<IMoonRepository, MoonRepository>();
 
+builder.Services.AddScoped<ICargoService, CargoService>();
+builder.Services.AddScoped<ICargoRepository, CargoRepository>();
 
 
 

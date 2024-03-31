@@ -25,6 +25,8 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
         {
             return View();
         }
+
+
             [HttpPost]
             public IActionResult Create(CreateMoonViewModel Moon)
             {
