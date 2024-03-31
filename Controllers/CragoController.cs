@@ -11,35 +11,35 @@ namespace SoftUniSpaceConsoleWebApp.Controllers
         private readonly ICargoService cargoService;
 
 
-        public CargoController(ICargoService cargoService) //!!!
+        public CargoController(ICargoService cargoService)
         {
             this.cargoService = cargoService;
         }
 
-        public IActionResult Index() //1
+        public IActionResult Index() 
         {
             var cargo = cargoService.GetAll();
 
-            return View(cargo); // otizame w view
+            return View(cargo); 
         }
 
-        public IActionResult Create() //tova e definirano v _Layout.cshtml.
+        public IActionResult Create() 
         {
             return View();
         }
 
-        [HttpPost] // от страницата идва тука затова Views е във <Form><>
+        [HttpPost] 
 
-        public IActionResult Create(CreateCargoViewModel Cargo) // ok 2 
+        public IActionResult Create(CreateCargoViewModel Cargo) 
         {
-            cargoService.Add(Cargo); //Peak definiton
+            cargoService.Add(Cargo); 
 
             return RedirectToAction(nameof(Index));
         }
 
-        public IActionResult Delete(int id) // From Views/Crew/Index.cshtml 
+        public IActionResult Delete(int id)
         {
-            cargoService.Delete(id); //Step 1 go to Service and call Delete method 
+            cargoService.Delete(id);
 
             return RedirectToAction(nameof(Index));
 
