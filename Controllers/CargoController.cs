@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SoftUniSpaceConsoleWebApp.Models.Crew;
+using SoftUniSpaceConsoleWebApp.Models;
+using SoftUniSpaceConsoleWebApp.Models.Cargo;
 using SoftUniSpaceConsoleWebApp.Services;
 using SoftUniSpaceConsoleWebApp.Services.Interfaces;
 
 namespace SoftUniSpaceConsoleWebApp.Controllers
 {
-    public class CragoController : Controller
+    public class CargoController : Controller
     {
 
         private readonly ICargoService cargoService;
